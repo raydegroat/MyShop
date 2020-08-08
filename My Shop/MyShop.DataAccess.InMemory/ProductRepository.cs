@@ -41,7 +41,7 @@ namespace MyShop.DataAccess.InMemory
                 productToUpdate = product;
             }else
             {
-                throw new Exception("Prodcut not found");
+                throw new Exception("Product not found");
             }
         }
         public Product Find(string Id)
@@ -62,15 +62,15 @@ namespace MyShop.DataAccess.InMemory
         }
         public void Delete(string Id)
         {
-            Product prodcutToDelete = products.Find(p => p.Id == Id);
+            Product productToDelete = products.Find(p => p.Id == Id);
 
-            if(prodcutToDelete != null)
+            if(productToDelete != null)
             {
-                products.Remove(prodcutToDelete);
+                products.Remove(productToDelete);
             }
             else
             {
-                throw new Exception("Prodcut not found");
+                throw new Exception("product not found");
             }
         }
     }
